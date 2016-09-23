@@ -4,8 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
         StringHolder stringHolder = new StringHolder("generyki weneryki");
-        StringHolder2 stringHolder2 = new StringHolder2("testdadsada");
-        System.out.println(stringHolder.getValue());
+        StringHolder2<Integer> stringHolder2 = new StringHolder2<>("testdadsada", 23);
+        System.out.println(stringHolder2.getValue());
 
 
         Holder<String> holder = new Holder<>("test");
