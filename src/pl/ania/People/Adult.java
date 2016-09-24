@@ -3,7 +3,7 @@ package pl.ania.People;
 /**
  * Created by lukasz on 2016-09-22.
  */
-public class Adult implements Grownup, Human {
+public class Adult implements Human {
 
 
     private String name;
@@ -22,5 +22,10 @@ public class Adult implements Grownup, Human {
     }
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

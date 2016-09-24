@@ -6,30 +6,34 @@ import java.util.List;
 /**
  * Created by lukasz on 2016-09-22.
  */
-public class People<T> {
+public class People<T extends Human> {
 
-    private T person;
+    private final List<T> list;
 
-    public T getPerson() {
-        return person;
+
+    public People() {
+        list = new ArrayList<T>();
     }
 
-    public People(T person){
-        this.person = person;
-    }
 
-    private List<T> list;
 
-    public List<T> getList() {
-        return list;
-    }
 
     public List<T> getAll() {
         return list;
     }
 
-    public void add(T person) {
-        list.add(person);
+
+    boolean isPresent(T person) {
+        return list.contains(person);
+    }
+
+    public boolean add(T person) {
+
+        if (!isPresent(person)) {
+            list.add(person);
+            return true;
+        }
+        return false;
     }
 
 
