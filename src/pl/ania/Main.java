@@ -19,6 +19,7 @@ public class Main {
         Holder<Holder<Integer>> holderHolder = new Holder<>(intHolder);
         Holder<Integer> value = holderHolder.getValue();
         System.out.println(value.getValue());
+        System.out.println(value.getValue());
 
     }
 }
