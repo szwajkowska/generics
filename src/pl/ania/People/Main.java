@@ -33,6 +33,8 @@ public class Main {
         System.out.println(kids.getAll());
         System.out.println(allPeople.getAll());
 
+        System.out.println("------------------------------");
+
         for (Human human : allPeople.getAll()) {
             System.out.println(human);
         }
